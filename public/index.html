@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>ReverbRecords API Test</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+    <!-- I like the narrow version better. -->
+    <link href="css/jumbotron-narrow.css" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script src="scripts/api_test.js"></script>
+
+    <!-- x-tra CSS -->
+    <style>
+
+
+    </style>
+  </head>
+  <body>
+    
+    <div class="container" role="main">
+
+      <div class="jumbotron">
+        <h2>This page uses the ReverbRecords API.</h2>
+        <p>It was built with Grape and runs on Rack.</p>
+      </div>
+
+      <div class="row">
+        The table below contains the data from a CSV file. When you press one of these buttons, an AJAX call to  the Grape API is made. The app then re-reads the data from the file, sorts it as requested, and rebuilds  this table. The field there will POST your input string to /records and add either it to the database if   it's valid or display the returned error message if there's a problem with it.
+      </div>
+  
+      <div class="row">
+        <div class="col-md-6">
+          <h1>Sort Data By:</h1> 
+          <button id="name" type="button" class="data-grabber btn btn-lg btn-primary">Name</button>
+          <button id="gender" type="button" class="data-grabber btn btn-lg btn-success">Gender</button>
+          <button id="birthdate" type="button" class="data-grabber btn btn-lg btn-info">Birthdate</button>
+        </div>
+    
+        <div class="col-md-6">
+          <h1>Add New Row:</h1> 
+
+          <form id="addrow-form">
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Pipe or comma separated">
+              <span class="input-group-btn">
+                <button class="btn btn-default" type="button">Add!</button>
+              </span>
+            </div><!-- /input-group -->
+          </form>
+        </div>
+      </div>
+
+      <span>API Output:</span>
+      <div class="row jumbotron">
+        <div id="api-output"> </div>
+      </div>
+      
+      <div class="row">
+        <div class="center-block">
+          <div class="">
+            <table id="record-table" class="table table-condensed">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>First Name</th>
+                  <th>Last Name</th>
+                  <th>Gender</th>
+                  <th>Favorite Color</th>
+                  <th>Birthdate</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Ricky</td>
+                  <td>Exampleman</td>
+                  <td>male</td>
+                  <td>lavander</td>
+                  <td>1955-10-22</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div> 
+      </div>
+
+    </div> <!-- .container -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>
