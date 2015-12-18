@@ -20,15 +20,9 @@ module ReverbRecords
         requires :record, type: String, regexp: /.+(\||,).+(\||,).+(\||,).+(\||,).+/ # This is being checked in the RecordParser class.
       end
       post do
-        begin
-          parsed = @parser.parse(params[:record])
-          @parser.insert(parsed)
-        rescue ArgumentError
-          error! "Your string is not in an approved format", 400
-        end
-
+        parsed = @parser.parse(params[:record])
+        @parser.insert(parsed)
         { success: true }
-          
       end
 
       desc 'Return the data sorted by gender, then last name'

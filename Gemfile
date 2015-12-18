@@ -1,8 +1,13 @@
 # Gemfile
 source "https://rubygems.org"
 
-gem 'rspec'
-gem 'rack-test'
-gem 'simplecov'
+group :test do
+  gem 'rspec'
+  gem 'rack-test'
+  gem 'simplecov'
+  gem 'capybara'
+  gem 'selenium-webdriver'
+end
+
 
 gem 'grape'
