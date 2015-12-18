@@ -70,13 +70,13 @@ describe ReverbRecords::API do
       context "with an invalid string" do
 
         it "rejects an invalid string" do
-          post "/api/records", 'LastName | , | Gender | | DateOfBirth'
-          expect(last_response.status).to eq(500)
+          post "/api/records", 'record' => 'nothing to parse here'
+          expect(last_response.status).to eq(400)
         end
 
         it "returns an error message" do
-          post "/api/records", 'LastName | , | Gender | | DateOfBirth'
-          expect(last_response.body).to eql({error: "There was a problem with the API."}.to_json)
+          post "/api/records", 'record' => 'nothing to parse here'
+          expect(last_response.body).to eql({error: "record is invalid"}.to_json)
 
         end
       end # context invalid

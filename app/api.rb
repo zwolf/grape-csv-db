@@ -6,9 +6,9 @@ module ReverbRecords
     prefix :api
 
     # A good idea? Prevents users from seeing app errors, at least.
-    rescue_from :all do |e|
-      error!("There was a problem with the API.")
-    end
+    # rescue_from :all do |e|
+    #   error!("There was a problem with the API.")
+    # end
 
     resource :records do
       before do
@@ -24,7 +24,7 @@ module ReverbRecords
           parsed = @parser.parse(params[:record])
           @parser.insert(parsed)
         rescue ArgumentError
-          error!("Your string is not in an approved format")
+          error! "Your string is not in an approved format", 400
         end
 
         { success: true }

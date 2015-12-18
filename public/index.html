@@ -20,7 +20,10 @@
 
     <!-- x-tra CSS -->
     <style>
-
+      #api-error {
+        display: none;
+        color: red;
+      }
 
     </style>
   </head>
@@ -48,20 +51,18 @@
         <div class="col-md-6">
           <h1>Add New Row:</h1> 
 
-          <form id="addrow-form">
-            <div class="input-group">
-              <input type="text" class="form-control" placeholder="Pipe or comma separated">
-              <span class="input-group-btn">
-                <button class="btn btn-default" type="button">Add!</button>
-              </span>
-            </div><!-- /input-group -->
-          </form>
+          <div id="newrowform" class="input-group">
+            <input id="newrecord" type="text" class="form-control" placeholder="Pipe or comma separated">
+            <span class="input-group-btn">
+              <button id="addbutton" class="btn btn-default" type="button">Add!</button>
+            </span>
+          </div><!-- /input-group -->
         </div>
       </div>
 
-      <span>API Output:</span>
-      <div class="row jumbotron">
-        <div id="api-output"> </div>
+      <div class="row">
+        <div id="api-error"> According to the API, There was a problem with your input.</div>
+        <span id="total-records">?</span> total records in database.
       </div>
       
       <div class="row">
