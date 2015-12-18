@@ -31,7 +31,7 @@ module ReverbRecords
 
       # Serve error pages or respond with API response
       case response[0]
-      when 404, 500
+      when 404, 500, 405
         content = @rack_static.call(env.merge('PATH_INFO' => "/errors/#{response[0]}.html"))
         [response[0], content[1], content[2]]
       else

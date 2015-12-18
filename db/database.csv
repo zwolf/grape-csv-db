@@ -6,4 +6,5 @@ Smith,Amanda,female,cerulean,1975-22-06
 Wilson,Amelia,female,cerulean,1985-22-09
 Brown,Zach,male,cerulean,1965-22-09
 Williams,Zippy,male,cerulean,1965-22-07
-Parsnip,Ricky,Gtransman,chartreuse,1971-08-05
+Parsnip,Ricky,male,chartreuse,1971-08-05
+LastName,FirstName,Gender,FavoriteColor,DateOfBirth
