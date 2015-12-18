@@ -40,5 +40,8 @@ $(function() {
   $('.data-grabber').click(function() {
     console.log("clicked " + $(this).attr('id'))
     get_data($(this).attr('id'))
+    $('html, body').animate({
+      scrollTop: $("#record-table").offset().top
+    }, 1000);
   });
 });

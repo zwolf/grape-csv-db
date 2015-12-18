@@ -20,14 +20,15 @@ describe ReverbRecords::API do
     end
 
     shared_examples "valid endpoint" do |endpoint|
-
-
-
       it "returns valid json" do
         get "/api/#{endpoint}"
         expect{ JSON.parse(last_response.body) }.not_to raise_error
       end
 
+      it 'has the correct header' do
+        get "/api/#{endpoint}"
+        expect(last_response.headers['Content-Type']).to eq('application/json')
+      end
     end
 
     describe ".name" do
@@ -67,9 +68,16 @@ describe ReverbRecords::API do
       end # context valid
       
       context "with an invalid string" do
+
         it "rejects an invalid string" do
           post "/api/records", 'LastName | , | Gender | | DateOfBirth'
           expect(last_response.status).to eq(500)
+        end
+
+        it "returns an error message" do
+          post "/api/records", 'LastName | , | Gender | | DateOfBirth'
+          expect(last_response.body).to eql({error: "There was a problem with the API."}.to_json)
+
         end
       end # context invalid
 

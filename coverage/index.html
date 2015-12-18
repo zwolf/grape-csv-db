@@ -14,7 +14,7 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2015-12-18T14:56:39-06:00">2015-12-18T14:56:39-06:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2015-12-18T15:52:52-06:00">2015-12-18T15:52:52-06:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -25,7 +25,7 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         3.01
+         3.6
        </span>
     </span> hits/line)
   </h2>
@@ -57,13 +57,13 @@
         <td>31</td>
         <td>30</td>
         <td>1</td>
-        <td>1.4</td>
+        <td>1.8</td>
       </tr>
       
       <tr>
         <td class="strong"><a href="#729eff4da7d2a581fe609459b0c0bf5406d859b4" class="src_link" title="app/reverb_records.rb">app/reverb_records.rb</a></td>
         <td class="red strong">25.0 %</td>
-        <td>76</td>
+        <td>42</td>
         <td>20</td>
         <td>5</td>
         <td>15</td>
@@ -77,7 +77,7 @@
         <td>27</td>
         <td>27</td>
         <td>0</td>
-        <td>8.4</td>
+        <td>11.1</td>
       </tr>
       
       <tr>
@@ -174,8 +174,8 @@
           <code class="ruby">    rescue_from :all do |e|</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="10">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="2" data-linenumber="10">
+          <span class="hits">2</span>
           
           <code class="ruby">      error!(&quot;There was a problem with the API.&quot;)</code>
         </li>
@@ -204,8 +204,8 @@
           <code class="ruby">      before do</code>
         </li>
       
-        <li class="covered" data-hits="7" data-linenumber="15">
-          <span class="hits">7</span>
+        <li class="covered" data-hits="11" data-linenumber="15">
+          <span class="hits">11</span>
           
           <code class="ruby">        @parser = RecordParser.new</code>
         </li>
@@ -330,14 +330,14 @@
           <code class="ruby">      get :gender do</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="36">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="2" data-linenumber="36">
+          <span class="hits">2</span>
           
           <code class="ruby">        rows = @parser.by_gender_then_last(@parser.get_data)</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="37">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="2" data-linenumber="37">
+          <span class="hits">2</span>
           
           <code class="ruby">        @parser.to_output_format(rows)</code>
         </li>
@@ -366,14 +366,14 @@
           <code class="ruby">      get :birthdate do</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="42">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="2" data-linenumber="42">
+          <span class="hits">2</span>
           
           <code class="ruby">        rows = @parser.by_dob_asc(@parser.get_data)</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="43">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="2" data-linenumber="43">
+          <span class="hits">2</span>
           
           <code class="ruby">        @parser.to_output_format(rows)</code>
         </li>
@@ -402,14 +402,14 @@
           <code class="ruby">      get :name do</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="48">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="2" data-linenumber="48">
+          <span class="hits">2</span>
           
           <code class="ruby">        rows = @parser.by_last_asc(@parser.get_data)</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="49">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="2" data-linenumber="49">
+          <span class="hits">2</span>
           
           <code class="ruby">        @parser.to_output_format(rows)</code>
         </li>
@@ -540,382 +540,178 @@
           <code class="ruby">      @instance ||= Rack::Builder.new do</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="14">
-          
-          
-          <code class="ruby">      #   use Rack::Cors do</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="15">
-          
-          
-          <code class="ruby">      #     allow do</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="16">
-          
-          
-          <code class="ruby">      #       origins &#39;*&#39;</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="17">
-          
-          
-          <code class="ruby">      #       resource &#39;*&#39;, headers: :any, methods: :get</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="18">
-          
-          
-          <code class="ruby">      #     end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="19">
-          
-          
-          <code class="ruby">        # end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="20">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="21">
+        <li class="missed" data-hits="0" data-linenumber="14">
           
           
           <code class="ruby">        run ReverbRecords::App.new</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="22">
+        <li class="missed" data-hits="0" data-linenumber="15">
           
           
           <code class="ruby">      end.to_app</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="23">
+        <li class="never" data-hits="" data-linenumber="16">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="24">
+        <li class="never" data-hits="" data-linenumber="17">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="25">
+        <li class="covered" data-hits="1" data-linenumber="18">
           <span class="hits">1</span>
           
           <code class="ruby">    def call(env)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="26">
+        <li class="never" data-hits="" data-linenumber="19">
           
           
           <code class="ruby">      # api</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="27">
+        <li class="missed" data-hits="0" data-linenumber="20">
           
           
           <code class="ruby">      response = ReverbRecords::API.call(env)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="28">
+        <li class="never" data-hits="" data-linenumber="21">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="29">
+        <li class="never" data-hits="" data-linenumber="22">
           
           
           <code class="ruby">      # Check if the App wants us to pass the response along to others</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="30">
+        <li class="missed" data-hits="0" data-linenumber="23">
           
           
           <code class="ruby">      if response[1][&#39;X-Cascade&#39;] == &#39;pass&#39;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="31">
+        <li class="never" data-hits="" data-linenumber="24">
           
           
           <code class="ruby">        # static files</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="32">
+        <li class="missed" data-hits="0" data-linenumber="25">
           
           
           <code class="ruby">        request_path = env[&#39;PATH_INFO&#39;]</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="33">
+        <li class="missed" data-hits="0" data-linenumber="26">
           
           
           <code class="ruby">        @filenames.each do |path|</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="34">
+        <li class="missed" data-hits="0" data-linenumber="27">
           
           
           <code class="ruby">          response = @rack_static.call(env.merge(&#39;PATH_INFO&#39; =&gt; request_path + path))</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="35">
+        <li class="missed" data-hits="0" data-linenumber="28">
           
           
           <code class="ruby">          return response if response[0] != 404</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="36">
+        <li class="never" data-hits="" data-linenumber="29">
           
           
           <code class="ruby">        end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="37">
+        <li class="never" data-hits="" data-linenumber="30">
           
           
           <code class="ruby">      end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="38">
+        <li class="never" data-hits="" data-linenumber="31">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="39">
+        <li class="never" data-hits="" data-linenumber="32">
           
           
           <code class="ruby">      # Serve error pages or respond with API response</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="40">
+        <li class="missed" data-hits="0" data-linenumber="33">
           
           
           <code class="ruby">      case response[0]</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="41">
+        <li class="never" data-hits="" data-linenumber="34">
           
           
           <code class="ruby">      when 404, 500</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="42">
+        <li class="missed" data-hits="0" data-linenumber="35">
           
           
           <code class="ruby">        content = @rack_static.call(env.merge(&#39;PATH_INFO&#39; =&gt; &quot;/errors/#{response[0]}.html&quot;))</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="43">
+        <li class="missed" data-hits="0" data-linenumber="36">
           
           
           <code class="ruby">        [response[0], content[1], content[2]]</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="44">
+        <li class="never" data-hits="" data-linenumber="37">
           
           
           <code class="ruby">      else</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="45">
+        <li class="missed" data-hits="0" data-linenumber="38">
           
           
           <code class="ruby">        response</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="46">
+        <li class="never" data-hits="" data-linenumber="39">
           
           
           <code class="ruby">      end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="47">
+        <li class="never" data-hits="" data-linenumber="40">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="48">
+        <li class="never" data-hits="" data-linenumber="41">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="49">
+        <li class="never" data-hits="" data-linenumber="42">
           
           
           <code class="ruby">end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="50">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="51">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="52">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="53">
-          
-          
-          <code class="ruby"># module ReverbRecords</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="54">
-          
-          
-          <code class="ruby">#   class App</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="55">
-          
-          
-          <code class="ruby">#     def initialize</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="56">
-          
-          
-          <code class="ruby">#       @rack_static = ::Rack::Static.new(</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="57">
-          
-          
-          <code class="ruby">#         lambda { [404, {}, []] }, {</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="58">
-          
-          
-          <code class="ruby">#           :root =&gt; File.expand_path(&#39;../../public&#39;, __FILE__),</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="59">
-          
-          
-          <code class="ruby">#           :urls =&gt; %w[/]</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="60">
-          
-          
-          <code class="ruby">#         })</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="61">
-          
-          
-          <code class="ruby">#     end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="62">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="63">
-          
-          
-          <code class="ruby">#     def call(env)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="64">
-          
-          
-          <code class="ruby">#       # api</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="65">
-          
-          
-          <code class="ruby">#       response = ReverbRecords::API.call(env)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="66">
-          
-          
-          <code class="ruby">#       case response[0]</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="67">
-          
-          
-          <code class="ruby">#       when 404, 500</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="68">
-          
-          
-          <code class="ruby">#         content = @rack_static.call(env.merge(&#39;PATH_INFO&#39; =&gt; &quot;/errors/#{response[0]}.html&quot;))</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="69">
-          
-          
-          <code class="ruby">#         [response[0], content[1], content[2]]</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="70">
-          
-          
-          <code class="ruby">#       else</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="71">
-          
-          
-          <code class="ruby">#         response</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="72">
-          
-          
-          <code class="ruby">#       end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="73">
-          
-          
-          <code class="ruby">#     end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="74">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="75">
-          
-          
-          <code class="ruby">#   end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="76">
-          
-          
-          <code class="ruby"># end</code>
         </li>
       
     </ol>
@@ -978,8 +774,8 @@
           <code class="ruby">    # Set the file based on the environment</code>
         </li>
       
-        <li class="covered" data-hits="29" data-linenumber="8">
-          <span class="hits">29</span>
+        <li class="covered" data-hits="33" data-linenumber="8">
+          <span class="hits">33</span>
           
           <code class="ruby">    @filename = ENV[&#39;DB_PATH&#39;]</code>
         </li>
@@ -990,8 +786,8 @@
           <code class="ruby">    # Touch the file in case #get_data is called first</code>
         </li>
       
-        <li class="covered" data-hits="29" data-linenumber="10">
-          <span class="hits">29</span>
+        <li class="covered" data-hits="33" data-linenumber="10">
+          <span class="hits">33</span>
           
           <code class="ruby">    CSV.open(&quot;db/#{@filename}&quot;, &#39;a&#39;) {}</code>
         </li>
@@ -1146,8 +942,8 @@
           <code class="ruby">    # Loading all the data in one fell swoop isn&#39;t scalable, but it&#39;ll work for our purposes.</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="36">
-          <span class="hits">4</span>
+        <li class="covered" data-hits="7" data-linenumber="36">
+          <span class="hits">7</span>
           
           <code class="ruby">    data = CSV.read(&quot;db/#{@filename}&quot;)</code>
         </li>
@@ -1176,8 +972,8 @@
           <code class="ruby">    # Sort by gender (a[2]) female (ascending), then last name (a[0]), ascending</code>
         </li>
       
-        <li class="covered" data-hits="15" data-linenumber="41">
-          <span class="hits">15</span>
+        <li class="covered" data-hits="24" data-linenumber="41">
+          <span class="hits">24</span>
           
           <code class="ruby">    data.sort_by {|a| [a[2].downcase,a[0].downcase] }</code>
         </li>
@@ -1206,8 +1002,8 @@
           <code class="ruby">    # Sort by DOB (a[4]), ascending</code>
         </li>
       
-        <li class="covered" data-hits="15" data-linenumber="46">
-          <span class="hits">15</span>
+        <li class="covered" data-hits="24" data-linenumber="46">
+          <span class="hits">24</span>
           
           <code class="ruby">    data.sort_by {|a| a[4].downcase}</code>
         </li>
@@ -1236,8 +1032,8 @@
           <code class="ruby">    # Sort by last (a[0]) ascending.</code>
         </li>
       
-        <li class="covered" data-hits="15" data-linenumber="51">
-          <span class="hits">15</span>
+        <li class="covered" data-hits="24" data-linenumber="51">
+          <span class="hits">24</span>
           
           <code class="ruby">    data.sort_by {|a| [a[0].downcase,a[1].downcase] }</code>
         </li>
@@ -1266,14 +1062,14 @@
           <code class="ruby">  def to_output_format(data)</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="56">
-          <span class="hits">5</span>
+        <li class="covered" data-hits="8" data-linenumber="56">
+          <span class="hits">8</span>
           
           <code class="ruby">    records = []</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="57">
-          <span class="hits">5</span>
+        <li class="covered" data-hits="8" data-linenumber="57">
+          <span class="hits">8</span>
           
           <code class="ruby">    data.each do |arr|</code>
         </li>
@@ -1314,8 +1110,8 @@
           <code class="ruby">        birthdate: arr[4]</code>
         </li>
       
-        <li class="covered" data-hits="34" data-linenumber="64">
-          <span class="hits">34</span>
+        <li class="covered" data-hits="58" data-linenumber="64">
+          <span class="hits">58</span>
           
           <code class="ruby">      } </code>
         </li>
@@ -1326,8 +1122,8 @@
           <code class="ruby">    end</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="66">
-          <span class="hits">5</span>
+        <li class="covered" data-hits="8" data-linenumber="66">
+          <span class="hits">8</span>
           
           <code class="ruby">    records</code>
         </li>
