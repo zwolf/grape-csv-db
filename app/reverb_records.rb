@@ -16,7 +16,6 @@ module ReverbRecords
     end
 
     def call(env)
-      # api
       response = ReverbRecords::API.call(env)
 
       # Check if the App wants us to pass the response along to others

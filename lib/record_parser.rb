@@ -13,9 +13,9 @@ class RecordParser
   # Parse a line
   def parse(record)
     # Test string validity?
-    if record.count(',') == 4 && record =~ /.+(\||,).+(\||,).+(\||,).+(\||,).+/ 
+    if record.count(',') == 4 && record =~ /.+(\||,).+(\||,).+(\||,).+(\||,).+/
       delim = ','
-    elsif record.count("|") == 4
+    elsif record.count("|") == 4 && record =~ /.+(\||,).+(\||,).+(\||,).+(\||,).+/
       delim = '|'
     else
       # String not valid, for it is not correctly delimited

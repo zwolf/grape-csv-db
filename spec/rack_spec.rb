@@ -1,5 +1,9 @@
 require 'spec_helper'
 
+# What follows is a series of very very very simple request specs.
+# They're enough to test the majority of the Rack app
+# which is probably enough for our purposes.
+
 describe 'ReverbRecords Rack App', js: true, type: :feature do
 
   context 'homepage' do
@@ -7,7 +11,6 @@ describe 'ReverbRecords Rack App', js: true, type: :feature do
       visit '/'
       expect(title).to eq('ReverbRecords API Test')
     end
-
   end
 
   context "page that doesn't exist" do

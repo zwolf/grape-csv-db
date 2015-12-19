@@ -18,11 +18,12 @@ describe RecordParser do
     describe ".parse" do
 
       context "valid string" do
-        it "doesn't throw an error" do
-          expect { should_not raise_error }
-        end
 
         shared_examples "parsed output" do
+          it "doesn't throw an error" do
+            expect {@parser.parse(record)}.not_to raise_error
+          end
+
           it "has the correct number of fields" do
             expect(result.count).to equal(5)
           end
