@@ -9,5 +9,5 @@ To start the app, type `rackup`. Visit [localhost:9292](http://localhost:9292/) 
 There you can see the data that currently lives in the CSV database, located at db/database.csv.
 
 
-To run the specs, just type `rspec`. This project uses [SimpleCov](https://github.com/colszowka/simplecov), so you can see the numbers by opening `/coverage/index.html`.
+To run the specs, just type `rspec`. This project uses [SimpleCov](https://github.com/colszowka/simplecov), so after you run them, you can see the coverage numbers by opening this file: `coverage/index.html`
 

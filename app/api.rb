@@ -5,11 +5,6 @@ module ReverbRecords
     format :json
     prefix :api
 
-    # A good idea? Prevents users from seeing app errors, at least.
-    # rescue_from :all do |e|
-    #   error!("There was a problem with the API.")
-    # end
-
     resource :records do
       before do
         @parser = RecordParser.new
@@ -17,7 +12,7 @@ module ReverbRecords
 
       desc 'Inserts a validated record into the database'
       params do
-        requires :record, type: String, regexp: /.+(\||,).+(\||,).+(\||,).+(\||,).+/ # This is being checked in the RecordParser class.
+        requires :record, type: String, regexp: /.+(\||,).+(\||,).+(\||,).+(\||,).+/ 
       end
       post do
         parsed = @parser.parse(params[:record])
