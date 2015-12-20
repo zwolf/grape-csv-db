@@ -1,8 +1,7 @@
 require 'spec_helper'
 
-# What follows is a series of very very very simple request specs.
-# They're enough to test the majority of the Rack app
-# which is probably enough for our purposes.
+# These are some very simple request specs.
+# But they're enough to test the majority of the Rack app, which is probably enough for our purposes.
 
 describe 'ReverbRecords Rack App', js: true, type: :feature do
 

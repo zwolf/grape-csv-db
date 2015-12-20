@@ -1,3 +1,6 @@
+# A simple script to add 10 lines of fake data to the CSV database.
+# You might have to `chmod +x ./seed_csv.rb` before running.
+
 require 'faker'
 require 'csv'
 

@@ -20,7 +20,7 @@ describe RecordParser do
       context "valid string" do
 
         shared_examples "parsed output" do
-          it "doesn't throw an error" do
+          it "doesn't raise an error" do
             expect {@parser.parse(record)}.not_to raise_error
           end
 
