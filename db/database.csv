@@ -8,3 +8,5 @@ Kuvalis,Gus,female,yellow,1959-02-29
 Okuneva,Herminio,male,sky blue,1981-09-04
 Swaniawski,Jerome,female,silver,1966-06-17
 Ferry,Dina,female,grey,1972-04-08
+LastName,FirstName,Gender,FavoriteColor,DateOfBirth
+LastName,FirstName,Gender,FavoriteColor,DateOfBirth

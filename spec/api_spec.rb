@@ -81,9 +81,7 @@ describe ReverbRecords::API do
         end
       end # context invalid
 
-
     end # describe post
-
       
   end # context records
 

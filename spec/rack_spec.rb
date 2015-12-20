@@ -5,6 +5,13 @@ require 'spec_helper'
 
 describe 'ReverbRecords Rack App', js: true, type: :feature do
 
+  context 'rack app' do
+    it 'responds to #call' do
+      @app = ReverbRecords::App.instance
+      expect(@app).to respond_to(:call)
+    end
+  end
+
   context 'homepage' do
     it 'displays index.html page' do
       visit '/'

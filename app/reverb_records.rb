@@ -16,11 +16,11 @@ module ReverbRecords
     end
 
     def call(env)
+      # Give the API first crack at the request
       response = ReverbRecords::API.call(env)
 
-      # Check if the App wants us to pass the response along to others
+      # Have Rack check the request if the API passes on it
       if response[1]['X-Cascade'] == 'pass'
-        # static files
         request_path = env['PATH_INFO']
         @filenames.each do |path|
           response = @rack_static.call(env.merge('PATH_INFO' => request_path + path))

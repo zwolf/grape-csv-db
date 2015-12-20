@@ -1,6 +1,6 @@
 # Reverb Records #
 
-Reverb Records is a simple Rack app, Grape-based API, and CSV database manager. 
+Reverb Records is a simple Rack app, Grape-based API, and CSV database manager. It was built with Ruby 2.2.3p173 and RSpec 3.4.1. 
 
 To get up and running, you'll need Bundler installed. Then, `bundle install` to get all the dependencies.
 
