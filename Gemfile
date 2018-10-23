@@ -15,3 +15,4 @@ end
 
 gem 'faker'
 gem 'grape'
+gem 'puma'
